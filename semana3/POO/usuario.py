@@ -261,3 +261,31 @@ for usuario in lista_usuarios:
 #   Python no identifica el objeto al que se quiere especificar
 # ¿Por qué saludar() puede acceder a nombre sin recibirlo como parámetro?
 #   Porque el atributo fue almacenado previamente en la instancia mediante self.nombre, y cualquier método de la clase puede acceder a los atributos de esa misma instancia utilizando self.
+
+# Desafío de entrevista QA Automation
+
+# Sin ejecutar:
+
+# class Usuario:
+
+#     def __init__(self):
+#         self.__password = "1234"
+
+#     def obtener_password(self):
+#         return self.__password
+
+# usuario = Usuario()
+
+# print(usuario.obtener_password())
+# Preguntas
+# ¿Qué imprime?
+#   1234
+# ¿Dónde está almacenada la contraseña?
+#   La contraseña está almacenada en el atributo __password
+# ¿Por qué funciona obtener_password() pero no usuario.__password?
+#   Porque se usa la convención de private para el atributo y con el name mangling se limita directamente el acceso al atributo
+# ¿Qué principio de POO se está utilizando?
+#   Se está utilizando la encapsulación
+# ¿Qué ventaja tiene esto en un framework de automatización?
+#   Es una ventaja, ya que limita el acceso de informaciones sensibles que deben ser protegidas y accedidas
+# en partes especificas de el aplicativo

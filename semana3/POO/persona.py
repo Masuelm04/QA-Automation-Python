@@ -1,155 +1,155 @@
-# # Ejercicio 1 - Primera herencia
+# Ejercicio 1 - Primera herencia
 
-# # Crea una clase:
+# Crea una clase:
 
-# # class Persona
+# class Persona
 
-# # Con:
+# Con:
 
-# # nombre
+# nombre
 
-# # en el constructor.
+# en el constructor.
 
-# # Luego crea una clase:
+# Luego crea una clase:
 
-# # class Tester(Persona)
+# class Tester(Persona)
 
-# # sin agregar nada más.
+# sin agregar nada más.
 
-# # Crea un objeto:
-
-# # tester = Tester("Antonio")
-
-# # Imprime:
-
-# # Antonio
-
-# class Persona:
-
-#     def __init__(self, nombre):
-#         self.nombre = nombre
-
-# class Tester(Persona):
-#     pass
+# Crea un objeto:
 
 # tester = Tester("Antonio")
-# print(tester.nombre)
 
-# # Ejercicio 2 - Herencia con nuevo atributo
+# Imprime:
 
-# # Partiendo de:
+# Antonio
 
-# # class Persona
+class Persona:
 
-# # crea:
+    def __init__(self, nombre):
+        self.nombre = nombre
 
-# # class Tester(Persona)
+class Tester(Persona):
+    pass
 
-# # que además reciba:
+tester = Tester("Antonio")
+print(tester.nombre)
 
-# # herramienta
+# Ejercicio 2 - Herencia con nuevo atributo
 
-# # Utiliza:
+# Partiendo de:
 
-# # super().__init__()
+# class Persona
 
-# # para inicializar el nombre.
+# crea:
 
-# # Prueba con:
+# class Tester(Persona)
 
-# # Tester("Antonio", "Playwright")
+# que además reciba:
 
-# # Imprime:
+# herramienta
 
-# # Antonio
-# # Playwright
+# Utiliza:
 
-# class Persona:
+# super().__init__()
 
-#     def __init__(self, nombre):
-#         self.nombre = nombre
+# para inicializar el nombre.
 
-# class Tester(Persona):
+# Prueba con:
 
-#     def __init__(self, nombre, herramienta):
-#         super().__init__(nombre)
+# Tester("Antonio", "Playwright")
 
-#         self.herramienta = herramienta
+# Imprime:
 
-# tester = Tester("Antonio", "Playwright")
+# Antonio
+# Playwright
 
-# print(tester.nombre)
-# print(tester.herramienta)
+class Persona:
 
-# # Ejercicio 3 - Método heredado
+    def __init__(self, nombre):
+        self.nombre = nombre
 
-# # Crea:
+class Tester(Persona):
 
-# # class Usuario
+    def __init__(self, nombre, herramienta):
+        super().__init__(nombre)
 
-# # Con un método:
+        self.herramienta = herramienta
 
-# # saludar()
+tester = Tester("Antonio", "Playwright")
 
-# # que imprima:
+print(tester.nombre)
+print(tester.herramienta)
 
-# # Hola usuario
+# Ejercicio 3 - Método heredado
 
-# # Luego crea:
+# Crea:
 
-# # class Admin(Usuario)
+# class Usuario
 
-# # sin agregar métodos.
+# Con un método:
 
-# # Verifica que el objeto Admin pueda ejecutar:
+# saludar()
 
-# # admin.saludar()
+# que imprima:
 
-# class Usuario:
+# Hola usuario
 
-#     def __init__(self, nombre):
-#         self.nombre = nombre
+# Luego crea:
 
-#     def saludar(self):
-#         print(f"Hola {self.nombre}")
+# class Admin(Usuario)
 
-# class Admin(Usuario):
-#     pass
+# sin agregar métodos.
 
-# admin = Admin("Masuel")
+# Verifica que el objeto Admin pueda ejecutar:
+
 # admin.saludar()
 
-# # Ejercicio 4 - Override (sobrescritura)
+class Usuario:
 
-# # Partiendo del ejercicio anterior:
+    def __init__(self, nombre):
+        self.nombre = nombre
 
-# # Haz que:
+    def saludar(self):
+        print(f"Hola {self.nombre}")
 
-# # class Admin
+class Admin(Usuario):
+    pass
 
-# # sobrescriba:
+admin = Admin("Masuel")
+admin.saludar()
 
-# # saludar()
+# Ejercicio 4 - Override (sobrescritura)
 
-# # para imprimir:
+# Partiendo del ejercicio anterior:
 
-# # Hola administrador
+# Haz que:
 
-# class Usuario:
+# class Admin
 
-#     def __init__(self, nombre):
-#         self.nombre = nombre
+# sobrescriba:
 
-#     def saludar(self):
-#         print(f"Hola {self.nombre}")
+# saludar()
 
-# class Admin(Usuario):
+# para imprimir:
 
-#     def saludar(self):
-#         print("Hola administrador")
+# Hola administrador
 
-# admin = Admin("Masuel")
-# admin.saludar()
+class Usuario:
+
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def saludar(self):
+        print(f"Hola {self.nombre}")
+
+class Admin(Usuario):
+
+    def saludar(self):
+        print("Hola administrador")
+
+admin = Admin("Masuel")
+admin.saludar()
 
 # Ejercicio 5 - Encapsulación básica
 
@@ -185,3 +185,92 @@ class Usuario:
     
 usuario = Usuario()
 print(usuario.obtener_password())
+
+# Ejercicio 6 - Error de acceso privado
+
+# Utilizando la clase anterior:
+
+# Intenta hacer:
+
+# print(usuario.__password)
+
+# Responde:
+
+# ¿Qué ocurre?
+#   Da error
+# ¿Qué excepción se genera?
+#   AttributeError
+# ¿Por qué sucede?
+#   Porque se utiliza name mangling para limitar el acceso directo a la variable
+# (No necesitas ejecutar este ejercicio).
+
+# Ejercicio 7 - QA Automation: BasePage
+
+# Crea una clase:
+
+# BasePage
+
+# Con un método:
+
+# abrir()
+
+# que imprima:
+
+# Abriendo página
+
+# Luego crea:
+
+# LoginPage(BasePage)
+
+# y verifica que pueda ejecutar:
+
+# login.abrir()
+
+class BasePage:
+
+    def __init__(self):
+        pass
+
+    def abrir(self):
+        print("Abriendo página")
+
+class LoginPage(BasePage):
+    pass
+
+login = LoginPage()
+login.abrir()
+
+# Ejercicio 8 - LoginPage personalizada
+
+# Partiendo del ejercicio anterior:
+
+# Agrega en LoginPage un método:
+
+# login(usuario, password)
+
+# Reglas:
+
+# admin + 1234 -> Login exitoso
+
+# Cualquier otro caso:
+
+# Credenciales incorrectas
+
+class BasePage:
+
+    def __init__(self):
+        pass
+
+    def abrir(self):
+        print("Abriendo página")
+
+class LoginPage(BasePage):
+    
+    def login(self, usuario, password):
+        if usuario == "Admin" and password == "1234":
+            print("Login exitoso")
+        else:
+            print("Credenciales incorrectas")
+
+login = LoginPage()
+login.login("Admin", "1234")
