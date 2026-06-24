@@ -1,2 +1,2 @@
 # QA-Automation-Python
-Aprendiendo Playwright + Python para QA Automation
+Aprendiendo Python para QA Automation
