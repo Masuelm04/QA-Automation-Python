@@ -1,0 +1,6 @@
+id,nombre,departamento,salario,activo
+1,Ana Gomez,QA,3200,True
+2,Pedro Martinez,Dev,4000,False
+3,Juan Rodriguez,Dev,3800,True
+4,Maria Lopez,Design,2900,False
+5,Luis Peralta,QA,3100,True
