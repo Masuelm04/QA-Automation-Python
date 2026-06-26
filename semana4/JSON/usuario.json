@@ -1,0 +1,19 @@
+{
+    "nombre": "Antonio",
+    "activo": true,
+    "status_code": 200,
+    "usuario": {
+        "nombre": "Lucas",
+        "edad": 25
+    },
+    "clientes": [
+        {"nombre": "Maria"},
+        {"nombre": "Johan"},
+        {"nombre": "Sebastian"}
+    ], 
+    "empleados": [
+        {"nombre": "Ana", "activo": true},
+        {"nombre": "Pedro", "activo": false},
+        {"nombre": "Juan", "activo": true}
+    ]
+}
