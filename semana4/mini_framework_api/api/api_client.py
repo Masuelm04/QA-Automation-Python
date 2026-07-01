@@ -13,5 +13,8 @@ class ApiClient:
     def put(self, endpoint, data):
         return requests.put(f"{self.BASE_URL}{endpoint}", json=data, verify=False)
     
+    def patch(self, endpoint, data):
+        return requests.patch(f"{self.BASE_URL}{endpoint}", json=data, verify=False)
+    
     def delete(self, endpoint):
         return requests.delete(f"{self.BASE_URL}{endpoint}", verify=False)
