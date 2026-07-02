@@ -16,6 +16,8 @@ data = response.json()
 print(f"Data post: {data}")
 
 assert response.status_code == 201
+assert response.headers["Content-Type"] == "application/json; charset=utf-8"
+assert response.elapsed.total_seconds() < 2
 
 print("POST completado correctamente.")
 
