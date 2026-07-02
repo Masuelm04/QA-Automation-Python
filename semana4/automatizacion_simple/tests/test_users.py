@@ -1,16 +1,13 @@
 from semana4.automatizacion_simple.services.user_service import UserService
 
-user = UserService()
+service = UserService()
 
-response = user.obtener_usuario(1)
-
-data = response.json()
-
-keys = ["id", "name"]
-
-for key in keys:
-    assert key in data
+response, usuario = service.get_usuario(1)
 
 assert response.status_code == 200, "GET fallido"
-assert data["id"] == 1, f"Id esperado: 1. Obtenido: {data["id"]}"
-assert data["name"] == "Leanne Graham", f"Name esperado: Leanne Graham. Obtenido: {data["name"]}"
+assert usuario.id == 1, f"Id esperado: 1. Obtenido: {usuario.id}"
+assert usuario.name == "Leanne Graham", f"Name esperado: Leanne Graham. Obtenido: {usuario.name}"
+assert usuario.username == "Bret", f"Usuario esperado: Bret. Obtenido: {usuario.username}"
+assert usuario.email == "Sincere@april.biz"
+
+print("Usuario validado correctamente.")
