@@ -1,0 +1,13 @@
+{
+    "nuevo_post": {
+        "title": "Post de prueba",
+        "body": "Este es un post creado desde el mini framework",
+        "userId": 1
+    },
+    "post_actualizado": {
+        "id": 1,
+        "title": "Post actualizado",
+        "body": "Contenido actualizado",
+        "userId": 1
+    }
+}

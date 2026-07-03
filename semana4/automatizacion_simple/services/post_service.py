@@ -7,34 +7,34 @@ class PostService:
         self.client = ApiClient()
 
     def get_post(self, id_post):
-        response = self.client.get(f"/post/{id_post}")
+        response = self.client.get(f"/posts/{id_post}")
 
         post = Post(response.json())
 
         return response, post
     
     def post_post(self, data):
-        response = self.client.post(f"/post", data)
+        response = self.client.post(f"/posts", data)
 
         post = Post(response.json())
 
         return response, post
     
     def put_post(self, id_post, data):
-        response = self.client.put(f"/post/{id_post}", data)
+        response = self.client.put(f"/posts/{id_post}", data)
 
         post = Post(response.json())
 
         return response, post
     
     def patch_post(self, id_post, data):
-        response = self.client.patch(f"/post/{id_post}", data)
+        response = self.client.patch(f"/posts/{id_post}", data)
 
         post = Post(response.json())
 
         return response, post
     
     def delete_post(self, id_post):
-        response = self.client.delete(f"/post/{id_post}")
+        response = self.client.delete(f"/posts/{id_post}")
 
         return response
